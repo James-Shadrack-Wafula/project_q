@@ -1,5 +1,5 @@
 streamlit==1.18.1
-dotenv==0.19.4
+dotenv==1.0.1
 langchain==0.0.41
 wBot2==1.0.0
 pinecone==2.2.4
