@@ -24,6 +24,10 @@ import os
 import sys
 
 
+st.set_page_config(
+    page_title="Q",  # Change the title displayed on the browser tab
+    page_icon="🤖"  # Set the favicon (you can provide a URL or a unicode character)
+)
 # #**Step 03: Load the PDF Files**
 
 # In[3]:
@@ -61,7 +65,7 @@ index_name = "my-index" # put in the name of your pinecone index here
 docsearch = Pinecone.from_existing_index(index_name, embeddings)
 query = "Rachel Green Qualification"
 docs = docsearch.similarity_search(query, k=3)
-docs
+# docs
 llm = GooglePalm(temperature=0.1)
 qa = RetrievalQA.from_chain_type(llm=llm, chain_type="stuff", retriever=docsearch.as_retriever())
 prompt_template  = """
@@ -85,7 +89,7 @@ def init_f():
   # In[8]:
 
 
-  print(data)
+#   print(data)
 
 
   # #**Step 05: Split the Extracted Data into Text Chunks**
@@ -206,7 +210,7 @@ def init_f():
   # In[28]:
 
 
-  docs
+#   
 
 
   # #**Step 10: Creating a Google PaLM Model Wrapper**
@@ -314,7 +318,7 @@ def ask(question):
   result = qa({'query': question})
   if result:
     print(f"Answer: {result['result']}")
-    return f"Answer: {result['result']}"
+    return f" {result['result']}"
   else:
     return("Result might be empty")
   
@@ -340,12 +344,12 @@ def ask(question):
 
 
 
-init_f()
+init_f() 
 
-st.set_page_config(
-    page_title="Q",  # Change the title displayed on the browser tab
-    page_icon="🤖"  # Set the favicon (you can provide a URL or a unicode character)
-)
+# st.set_page_config(
+#     page_title="Q",  # Change the title displayed on the browser tab
+#     page_icon="🤖"  # Set the favicon (you can provide a URL or a unicode character)
+# )
 
 # Sidebar contents
 with st.sidebar:
