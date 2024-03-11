@@ -9,7 +9,7 @@ from langchain.chains import RetrievalQA
 from langchain.embeddings import GooglePalmEmbeddings
 from langchain.llms import GooglePalm
 import os, glob
-from wBot2 import ask, init_f
+from . wBot2 import ask, init_f
 
 init_f()
 
