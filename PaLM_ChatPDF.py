@@ -28,14 +28,14 @@ with st.sidebar:
     Hello meet Q, my AI Powerd Personal Assistant \n 
     Have a question? Ask Q. \n
     Contact me on:
-    - [GitHub](https://streamlit.io/)
-    - [WhatsApp](https://python.langchain.com/)
-    - [Instagram](https://makersuite.google.com/app/home) Embeddings & LLM model
+    - [GitHub](https://github.com/James-Shadrack-Wafula/)
+    - [WhatsApp](https://wa.me/254746727592/)
+    - [Instagram](https://makersuite.google.com/app/home) 
  
     """
     )
     add_vertical_space(5)
-    st.write("Developed by [Jimmy](https://mindset-group.org/)")
+    st.write("Developed by [Jimmy](http://james-shadrack-wafula.rf.gd/)")
 
 load_dotenv()
 
